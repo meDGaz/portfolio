@@ -26,11 +26,11 @@ Pour lancer ce projet localement et explorer le code :
 
 1. Clonez ce dépôt :
    ```bash
-   git clone https://github.com/votre-nom-d-utilisateur/votre-repo.git
+   git clone https://github.com/meDGaz/portfolio.git
    ```
 2. Ouvrez le dossier du projet :
    ```bash
-   cd votre-repo
+   cd portfolio
    ```
 3. Lancez le fichier `index.html` :
    - Ouvrez simplement `index.html` depuis votre navigateur.
