@@ -1,0 +1,765 @@
+:root {
+    /* Colors */
+    --bg-dark: #0f172a;
+    /* Slate 900 */
+    --bg-card: #1e293b;
+    /* Slate 800 */
+    --bg-card-hover: #334155;
+    /* Slate 700 */
+    --text-main: #f8fafc;
+    /* Slate 50 */
+    --text-muted: #94a3b8;
+    /* Slate 400 */
+
+    /* Brands Accent */
+    --accent-laravel: #ff2d20;
+    --accent-vue: #42b883;
+    --accent-glow: rgba(66, 184, 131, 0.2);
+
+    /* UI Elements */
+    --border-color: rgba(255, 255, 255, 0.05);
+    --border-radius: 1.5rem;
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background Effects */
+.bg-gradient {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(30, 41, 59, 0.8) 0%, var(--bg-dark) 50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-laravel {
+    color: var(--accent-laravel);
+    text-shadow: 0 0 10px rgba(255, 45, 32, 0.4);
+}
+
+.highlight-vue {
+    color: var(--accent-vue);
+    text-shadow: 0 0 10px var(--accent-glow);
+}
+
+p {
+    color: var(--text-muted);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Glitch Effect */
+.glitch-text {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch-text::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--accent-laravel);
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+    left: -2px;
+    text-shadow: -2px 0 var(--accent-vue);
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+    0% {
+        clip-path: inset(20% 0 80% 0);
+    }
+
+    20% {
+        clip-path: inset(60% 0 10% 0);
+    }
+
+    40% {
+        clip-path: inset(40% 0 50% 0);
+    }
+
+    60% {
+        clip-path: inset(80% 0 5% 0);
+    }
+
+    80% {
+        clip-path: inset(10% 0 70% 0);
+    }
+
+    100% {
+        clip-path: inset(30% 0 20% 0);
+    }
+}
+
+@keyframes glitch-anim-2 {
+    0% {
+        clip-path: inset(10% 0 60% 0);
+    }
+
+    20% {
+        clip-path: inset(30% 0 20% 0);
+    }
+
+    40% {
+        clip-path: inset(70% 0 10% 0);
+    }
+
+    60% {
+        clip-path: inset(20% 0 50% 0);
+    }
+
+    80% {
+        clip-path: inset(50% 0 30% 0);
+    }
+
+    100% {
+        clip-path: inset(5% 0 80% 0);
+    }
+}
+
+
+/* Layout & Structure */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-padding {
+    padding: 6rem 0;
+}
+
+.section-header {
+    margin-bottom: 3rem;
+}
+
+.section-header .dot {
+    color: var(--accent-vue);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 2rem;
+    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.8);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo .dot {
+    color: var(--accent-laravel);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: var(--transition-fast);
+}
+
+.nav-links a:hover {
+    color: var(--text-main);
+}
+
+/* Bento Grid System */
+.bento-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.bento-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.bento-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.span-3 {
+    grid-column: span 3;
+}
+
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition-fast);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--text-main);
+    color: var(--bg-dark);
+}
+
+.btn-primary:hover {
+    background: #e2e8f0;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* Hero Section */
+.hero {
+    padding-top: 8rem;
+    /* Enough initial padding to clear the navbar */
+    padding-bottom: 3rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-bento {
+    width: 100%;
+    margin: auto 0;
+    /* Safer vertical centering that prevents top-cutoff on small heights */
+    grid-template-rows: 1fr auto;
+}
+
+@media (min-width: 993px) {
+    .hero-bento {
+        height: auto;
+        min-height: 600px;
+        /* Let it grow naturally without strict max-height constraints */
+    }
+
+    .pitch-card {
+        padding: 3.5rem;
+        /* Spacious padding for desktop */
+    }
+}
+
+.pitch-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: rgba(66, 184, 131, 0.1);
+    color: var(--accent-vue);
+    border: 1px solid rgba(66, 184, 131, 0.2);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+.pitch {
+    font-size: 1.1rem;
+    max-width: 90%;
+    margin-bottom: 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.inline-socials {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.inline-socials .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-fast);
+}
+
+.inline-socials .social-btn:hover {
+    background: var(--text-main);
+    color: var(--bg-dark);
+    transform: translateY(-3px);
+}
+
+.photo-card {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Ground the portrait to the bottom */
+    background-color: var(--bg-dark);
+    /* Dark backdrop for the Matrix effect */
+}
+
+.matrix-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.6;
+    /* Semi-transparent so it's not overly distracting */
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    /* Outline discret + standard drop shadow */
+    filter: saturate(0.85) contrast(1.15) drop-shadow(0 0 8px rgba(255, 255, 255, 0.2)) drop-shadow(0 15px 25px rgba(0, 0, 0, 0.6));
+    transition: var(--transition-smooth);
+    position: relative;
+    z-index: 1;
+}
+
+.photo-card:hover .profile-img {
+    filter: saturate(1) contrast(1.05) drop-shadow(0 0 15px rgba(255, 255, 255, 0.3)) drop-shadow(0 20px 30px rgba(0, 0, 0, 0.8));
+    transform: scale(1.03) translateY(-5px);
+}
+
+
+/* Parcours */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.tech-category h4 {
+    margin-bottom: 1rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0.4rem 0.8rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.tag.laravel {
+    color: var(--accent-laravel);
+    border-color: rgba(255, 45, 32, 0.3);
+}
+
+.tag.vue {
+    color: var(--accent-vue);
+    border-color: rgba(66, 184, 131, 0.3);
+}
+
+.timeline {
+    list-style: none;
+    margin-top: 1.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border-color);
+}
+
+.timeline li {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 0.4rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent-vue);
+    transform: translateX(-40%);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent-vue);
+    margin-bottom: 0.3rem;
+}
+
+.timeline-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.timeline-content p {
+    font-size: 0.9rem;
+}
+
+
+/* Realisations */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.project-bento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    align-items: center;
+}
+
+.project-bento.reverse {
+    direction: rtl;
+}
+
+.project-bento.reverse>* {
+    direction: ltr;
+}
+
+.project-visual {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+}
+
+.project-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.project-visual:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-visual:hover img {
+    transform: scale(1.05);
+}
+
+.category-badge {
+    color: var(--accent-laravel);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.project-header .role {
+    font-weight: 600;
+    color: var(--text-main);
+    margin-top: 0.5rem;
+}
+
+.project-problematic h4,
+.project-stack h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+/* Reflexion Box */
+.reflection-box {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+
+.reflection-box summary {
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition-fast);
+}
+
+.reflection-box summary:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.reflection-box summary::-webkit-details-marker {
+    display: none;
+}
+
+.reflection-content {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.ref-item {
+    margin-top: 1rem;
+}
+
+.ref-item h5 {
+    color: var(--text-main);
+    margin-bottom: 0.3rem;
+}
+
+.ref-item p {
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+
+.contact-methods {
+    list-style: none;
+}
+
+.contact-methods li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-methods i {
+    color: var(--accent-vue);
+}
+
+.contact-methods span {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 3rem 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Utility Reveals */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .bento-container {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-item {
+        padding: 1.5rem;
+        /* Prevent cards like pitch-card from overflowing horizontally */
+    }
+
+    .span-2,
+    .span-3,
+    .photo-card {
+        grid-column: span 1;
+    }
+
+    .hero-bento {
+        grid-template-rows: auto;
+    }
+
+    .project-bento {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .contact-bento {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        justify-content: flex-start;
+        /* Avoid centering issues when content is long */
+    }
+}

@@ -1,0 +1,18 @@
+/* Skills Cloud Magnetic Effect */
+.skills-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    perspective: 1200px;
+}
+
+.skills-cloud .tag {
+    transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.2s ease;
+    will-change: transform;
+    cursor: default;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+}
