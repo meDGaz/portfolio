@@ -24,11 +24,19 @@
         <div class="nav-content">
             <span class="logo">Gazzoun<span class="dot">.</span></span>
             <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#parcours">Parcours</a></li>
-                <li><a href="#realisations">Réalisations</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#accueil" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="#parcours" data-i18n="nav.journey">Parcours</a></li>
+                <li><a href="#realisations" data-i18n="nav.projects">Réalisations</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
+            <div class="lang-switch-container">
+                <span class="lang-label active" id="label-en">EN</span>
+                <label class="lang-switch">
+                    <input type="checkbox" id="lang-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="lang-label" id="label-fr">FR</span>
+            </div>
         </div>
     </nav>
 
@@ -38,19 +46,20 @@
             <div class="bento-container hero-bento">
 
                 <div class="bento-item pitch-card span-2">
-                    <div class="badge">Disponible pour embauche</div>
-                    <h1 class="glitch-text" data-text="Développeur Fullstack">Développeur Fullstack</h1>
-                    <h2 class="sub-title">Spécialiste <span class="highlight-laravel">Laravel</span> & <span
-                            class="highlight-vue">Vue.js</span></h2>
-                    <p class="pitch">
+                    <div class="badge" data-i18n="hero.badge">Disponible pour embauche</div>
+                    <h1 class="glitch-text" data-text="Développeur Fullstack" data-i18n="hero.title">Développeur
+                        Fullstack</h1>
+                    <h2 class="sub-title"><span data-i18n="hero.subtitle">Spécialiste</span> <span
+                            class="highlight-laravel">Laravel</span> & <span class="highlight-vue">Vue.js</span></h2>
+                    <p class="pitch" data-i18n="hero.pitch">
                         Je conçois des applications web robustes, performantes et scalables, spécialisé dans la création
                         de <strong>logiciels en mode SaaS</strong>.
                         Mon approche allie une architecture backend solide en PHP avec des interfaces utilisateur
                         dynamiques et réactives.
                     </p>
                     <div class="hero-actions">
-                        <a href="#realisations" class="btn btn-primary">Voir les preuves</a>
-                        <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                        <a href="#realisations" class="btn btn-primary" data-i18n="hero.action1">Voir les preuves</a>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="hero.action2">Me contacter</a>
                     </div>
 
                     <div class="social-links inline-socials mt-4">
@@ -78,15 +87,15 @@
         <!-- PARCOURS -->
         <section id="parcours" class="section-padding reveal">
             <div class="section-header">
-                <h2>Mon<span class="dot">.</span>Parcours</h2>
-                <p>Mon arsenal technique et mon évolution.</p>
+                <h2 data-i18n="journey.title">Mon<span class="dot">.</span>Parcours</h2>
+                <p data-i18n="journey.desc">Mon arsenal technique et mon évolution.</p>
             </div>
 
             <div class="bento-container parcours-bento">
 
                 <!-- Stack Technique -->
                 <div class="bento-item tech-card span-2">
-                    <h3>Stack Technique</h3>
+                    <h3 data-i18n="journey.stack">Stack Technique</h3>
                     <div class="skills-cloud">
                         <span class="tag vue"><i class="fa-brands fa-vuejs"></i> Vue.js</span>
                         <span class="tag"><i class="fa-brands fa-typescript"></i> TypeScript </span>
@@ -116,50 +125,50 @@
 
                 <!-- CV Dynamique -->
                 <div class="bento-item cv-card">
-                    <h3>Expériences clés</h3>
+                    <h3 data-i18n="journey.xp">Expériences clés</h3>
                     <ul class="timeline">
                         <li>
-                            <div class="timeline-date">2023 - Aujourd'hui</div>
+                            <div class="timeline-date" data-i18n="xp1.date">2023 - Aujourd'hui</div>
                             <div class="timeline-content">
-                                <h4>Développeur Fullstack</h4>
-                                <p><strong>SYSTALIUM (Freelance)</strong> • <small>Dijon</small><br>
-                                    <span style="font-size: 0.9rem; color: var(--text-muted);">Conception et
-                                        développement de solutions web sur mesure et de <strong>logiciels en mode
-                                            SaaS</strong>. Création d'architectures backend
+                                <h4 data-i18n="xp1.title">Développeur Fullstack</h4>
+                                <p><strong>SYSTALIUM (Freelance)</strong> • <small data-i18n="xp1.loc">Dijon</small><br>
+                                    <span style="font-size: 0.9rem; color: var(--text-muted);"
+                                        data-i18n="xp1.desc">Conception et développement de solutions web sur mesure et
+                                        de <strong>logiciels en mode SaaS</strong>. Création d'architectures backend
                                         robustes et d'interfaces réactives.</span>
                                 </p>
                             </div>
                         </li>
                         <li>
-                            <div class="timeline-date">2022 - Aujourd'hui</div>
+                            <div class="timeline-date" data-i18n="xp2.date">2022 - Aujourd'hui</div>
                             <div class="timeline-content">
-                                <h4>Co-fondateur & Tech Lead</h4>
+                                <h4 data-i18n="xp2.title">Co-fondateur & Tech Lead</h4>
                                 <p><strong>Sparta Sat</strong><br>
-                                    <span style="font-size: 0.9rem; color: var(--text-muted);">Lancement et gestion
-                                        technique d'une boutique spécialisée (Services IPTV). Gestion complète du cycle
-                                        de vie du projet.</span>
+                                    <span style="font-size: 0.9rem; color: var(--text-muted);"
+                                        data-i18n="xp2.desc">Lancement et gestion technique d'une boutique spécialisée
+                                        (Services IPTV). Gestion complète du cycle de vie du projet.</span>
                                 </p>
                             </div>
                         </li>
                         <li>
                             <div class="timeline-date">2013 - 2022</div>
                             <div class="timeline-content">
-                                <h4>Développeur Web Confirmé</h4>
+                                <h4 data-i18n="xp3.title">Développeur Web Confirmé</h4>
                                 <p><strong>BA-Websolutions</strong><br>
-                                    <span style="font-size: 0.9rem; color: var(--text-muted);">Développement de
-                                        multiples applications web en agence. Maîtrise des fondamentaux du web et
-                                        optimisation technique continue.</span>
+                                    <span style="font-size: 0.9rem; color: var(--text-muted);"
+                                        data-i18n="xp3.desc">Développement de multiples applications web en agence.
+                                        Maîtrise des fondamentaux du web et optimisation technique continue.</span>
                                 </p>
                             </div>
                         </li>
                         <li>
                             <div class="timeline-date">2012 - 2013</div>
                             <div class="timeline-content">
-                                <h4>Infographiste Web & Print</h4>
-                                <p><strong>SHERRINGTON</strong> • <small>Prêt-à-porter</small><br>
-                                    <span style="font-size: 0.9rem; color: var(--text-muted);">Création de supports de
-                                        communication visuels. Cette expérience forge aujourd'hui mon œil analytique
-                                        pour l'UI/UX design.</span>
+                                <h4 data-i18n="xp4.title">Infographiste Web & Print</h4>
+                                <p><strong>SHERRINGTON</strong> • <small data-i18n="xp4.loc">Prêt-à-porter</small><br>
+                                    <span style="font-size: 0.9rem; color: var(--text-muted);"
+                                        data-i18n="xp4.desc">Création de supports de communication visuels. Cette
+                                        expérience forge aujourd'hui mon œil analytique pour l'UI/UX design.</span>
                                 </p>
                             </div>
                         </li>
@@ -168,7 +177,7 @@
 
                 <!-- Certifications -->
                 <div class="bento-item certifications-card span-3">
-                    <h3>Certifications</h3>
+                    <h3 data-i18n="journey.cert">Certifications</h3>
                     <div class="tech-grid">
                         <div class="tech-category">
                             <h4>Le Wagon (2025)</h4>
@@ -206,8 +215,8 @@
         <!-- REALISATIONS -->
         <section id="realisations" class="section-padding reveal">
             <div class="section-header">
-                <h2>Mes<span class="dot">.</span>Réalisations</h2>
-                <p>Preuves de compétences et retours d'expériences.</p>
+                <h2 data-i18n="projects.title">Mes<span class="dot">.</span>Réalisations</h2>
+                <p data-i18n="projects.desc">Preuves de compétences et retours d'expériences.</p>
             </div>
 
             <div class="projects-container">
@@ -217,23 +226,24 @@
                     <div class="project-visual">
                         <img src="images/AMESLA-2026-09-75fb2176.webp" alt="Screenshot Projet Amesla">
                         <div class="project-overlay">
-                            <a href="https://www.amesla-medecine-esthetique.com/" class="btn btn-primary github-btn"><i
-                                    class="fa-solid fa-link"></i> Voir le
-                                projet</a>
+                            <a href="https://www.amesla-medecine-esthetique.com/" class="btn btn-primary github-btn"
+                                data-i18n="proj1.link"><i class="fa-solid fa-link"></i> Voir le projet</a>
                         </div>
                     </div>
                     <div class="project-details">
                         <div class="project-header">
-                            <span class="category-badge">Développement Web / E-Santé</span>
+                            <span class="category-badge" data-i18n="proj1.cat">Développement Web / E-Santé</span>
                             <h3>Amesla</h3>
-                            <p class="role">Rôle : Lead Dev Fullstack • Équipe de 4 développeurs</p>
+                            <p class="role" data-i18n="proj1.role">Rôle : Lead Dev Fullstack • Équipe de 4 développeurs
+                            </p>
                         </div>
 
                         <div class="project-problematic mt-4">
-                            <h4><i class="fa-solid fa-bullseye"></i> Présentation</h4>
-                            <p><strong>Logiciel en mode SaaS d'envergure internationale (projet basé en France)</strong>. Il offre une solution complète de prise de rendez-vous en ligne et de gestion de dossiers patients à
-                                destination des praticiens qui exercent leur activité dans
-                                un centre médical esthétique.</p>
+                            <h4 data-i18n="proj.pres"><i class="fa-solid fa-bullseye"></i> Présentation</h4>
+                            <p data-i18n="proj1.desc"><strong>Logiciel en mode SaaS d'envergure internationale (projet
+                                    basé en France)</strong>. Il offre une solution complète de prise de rendez-vous en
+                                ligne et de gestion de dossiers patients à destination des praticiens qui exercent leur
+                                activité dans un centre médical esthétique.</p>
                         </div>
 
                         <div class="project-stack mt-4">
@@ -250,25 +260,25 @@
 
                         <!-- Reflexivité (Accordéon / Details) -->
                         <details class="reflection-box mt-4">
-                            <summary>💡 Posture Réflexive (Retours d'expérience)</summary>
+                            <summary data-i18n="proj.ref">💡 Posture Réflexive (Retours d'expérience)</summary>
                             <div class="reflection-content">
                                 <div class="ref-item">
-                                    <h5>Complexité des données</h5>
-                                    <p>Gérer les agendas croisés en temps réel et les dossiers des patients a nécessité
-                                        une base de données MySQL robuste, exploitant toute la puissance de l'ORM
-                                        Eloquent.</p>
+                                    <h5 data-i18n="proj1.ref1.t">Complexité des données</h5>
+                                    <p data-i18n="proj1.ref1.d">Gérer les agendas croisés en temps réel et les dossiers
+                                        des patients a nécessité une base de données MySQL robuste, exploitant toute la
+                                        puissance de l'ORM Eloquent.</p>
                                 </div>
                                 <div class="ref-item">
-                                    <h5>Data Visualisation</h5>
-                                    <p>Intégration poussée de la librairie <strong>amCharts</strong> afin d'offrir aux
-                                        professionnels de santé des statistiques d'activité dynamiques et interactives.
-                                    </p>
+                                    <h5 data-i18n="proj1.ref2.t">Data Visualisation</h5>
+                                    <p data-i18n="proj1.ref2.d">Intégration poussée de la librairie
+                                        <strong>amCharts</strong> afin d'offrir aux professionnels de santé des
+                                        statistiques d'activité dynamiques et interactives.</p>
                                 </div>
                                 <div class="ref-item">
-                                    <h5>Performance (SPA)</h5>
-                                    <p>L'utilisation combinée de <strong>Laravel, Vue.js et Inertia.js</strong> donne à
-                                        l'interface une réactivité absolue. Pas de rechargement de page : c'est un vrai
-                                        logiciel métier hébergé sur le web.</p>
+                                    <h5 data-i18n="proj1.ref3.t">Performance (SPA)</h5>
+                                    <p data-i18n="proj1.ref3.d">L'utilisation combinée de <strong>Laravel, Vue.js et
+                                            Inertia.js</strong> donne à l'interface une réactivité absolue. Pas de
+                                        rechargement de page : c'est un vrai logiciel métier hébergé sur le web.</p>
                                 </div>
                             </div>
                         </details>
@@ -282,26 +292,27 @@
                             alt="TraveLoop Interface">
                         <div class="project-overlay">
                             <a href="#" class="btn btn-primary github-btn"
-                                style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); pointer-events: none;"><i
-                                    class="fa-solid fa-hourglass-half"></i> Bientôt sur GitHub</a>
+                                style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); pointer-events: none;"
+                                data-i18n="proj2.link"><i class="fa-solid fa-hourglass-half"></i> Bientôt sur GitHub</a>
                         </div>
                     </div>
                     <div class="project-details">
                         <div class="project-header">
-                            <span class="category-badge">Projet Libre / Réseau Social</span>
+                            <span class="category-badge" data-i18n="proj2.cat">Projet Libre / Réseau Social</span>
                             <h3>TraveLoop</h3>
-                            <p class="role">Rôle : Projet Personnel (De l'idée à la production)</p>
+                            <p class="role" data-i18n="proj2.role">Rôle : Projet Personnel (De l'idée à la production)
+                            </p>
                         </div>
 
                         <div class="project-problematic mt-4">
-                            <h4><i class="fa-solid fa-bullseye"></i> Problématique</h4>
-                            <p>Concevoir et développer de zéro une plateforme communautaire interactive pour les
-                                voyageurs. Le système exige des interactions sans latence pour les fils d'actualités,
-                                les messageries et les systèmes relationnels (Follow/Like).</p>
+                            <h4 data-i18n="proj.prob"><i class="fa-solid fa-bullseye"></i> Problématique</h4>
+                            <p data-i18n="proj2.desc">Concevoir et développer de zéro une plateforme communautaire
+                                interactive pour les voyageurs. Le système exige des interactions sans latence pour les
+                                fils d'actualités, les messageries et les systèmes relationnels (Follow/Like).</p>
                         </div>
 
                         <div class="project-stack mt-4">
-                            <h4><i class="fa-solid fa-layer-group"></i> Stack Technique</h4>
+                            <h4 data-i18n="proj.stack"><i class="fa-solid fa-layer-group"></i> Stack Technique</h4>
                             <div class="tags small">
                                 <span class="tag laravel">Laravel</span>
                                 <span class="tag vue">Vue.js</span>
@@ -312,21 +323,21 @@
 
                         <!-- Reflexivité -->
                         <details class="reflection-box mt-4">
-                            <summary>💡 Posture Réflexive (Retours d'expérience)</summary>
+                            <summary data-i18n="proj.ref">💡 Posture Réflexive (Retours d'expérience)</summary>
                             <div class="reflection-content">
                                 <div class="ref-item">
-                                    <h5>Optimisation des Interactions (Likes)</h5>
-                                    <p>Sur un réseau social, les actions "Like" ou "Follow" sont extrêmement
-                                        sollicitées. J'ai dû implémenter des garde-fous côté front-end (Vue.js) pour
-                                        empêcher la surcharge du serveur lors de clics rapides multiples sur les cœurs.
-                                    </p>
+                                    <h5 data-i18n="proj2.ref1.t">Optimisation des Interactions (Likes)</h5>
+                                    <p data-i18n="proj2.ref1.d">Sur un réseau social, les actions "Like" ou "Follow"
+                                        sont extrêmement sollicitées. J'ai dû implémenter des garde-fous côté front-end
+                                        (Vue.js) pour empêcher la surcharge du serveur lors de clics rapides multiples
+                                        sur les cœurs.</p>
                                 </div>
                                 <div class="ref-item">
-                                    <h5>Complexité de l'UI et des États</h5>
-                                    <p>Maintenir un badge de notification précis (likes, commentaires, follows) qui
-                                        persiste entre les rafraîchissements et synchroniser les modales complexes de
-                                        messagerie (ex: <code>ChatModal.vue</code> avec avatars par défaut) fut un vrai
-                                        défi en matière de gestion de l'état asynchrone.</p>
+                                    <h5 data-i18n="proj2.ref2.t">Complexité de l'UI et des États</h5>
+                                    <p data-i18n="proj2.ref2.d">Maintenir un badge de notification précis (likes,
+                                        commentaires, follows) qui persiste entre les rafraîchissements et synchroniser
+                                        les modales complexes de messagerie (ex: <code>ChatModal.vue</code> avec avatars
+                                        par défaut) fut un vrai défi en matière de gestion de l'état asynchrone.</p>
                                 </div>
                             </div>
                         </details>
@@ -342,15 +353,16 @@
             <div class="bento-container">
                 <div class="bento-item contact-info span-3"
                     style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-                    <h2>Prêt à collaborer ?</h2>
-                    <p>Je suis activement à la recherche d'une opportunité en CDI ou Freelance.</p>
+                    <h2 data-i18n="contact.title">Prêt à collaborer ?</h2>
+                    <p data-i18n="contact.desc">Je suis activement à la recherche d'une opportunité en CDI ou Freelance.
+                    </p>
 
                     <ul class="contact-methods mt-4"
                         style="display: flex; flex-wrap: wrap; justify-content: center; gap: 3rem;">
                         <li style="margin-bottom: 0;">
                             <i class="fa-solid fa-envelope" style="font-size: 1.5rem;"></i>
                             <div style="text-align: left;">
-                                <span>Email</span>
+                                <span data-i18n="contact.email">Email</span>
                                 <strong><a href="mailto:gazzoun@gmail.com"
                                         style="color: var(--text-main); text-decoration: underline; transition: color 0.2s;"
                                         onmouseover="this.style.color='var(--accent-vue)'"
@@ -360,8 +372,8 @@
                         <li style="margin-bottom: 0;">
                             <i class="fa-solid fa-location-dot" style="font-size: 1.5rem;"></i>
                             <div style="text-align: left;">
-                                <span>Localisation</span>
-                                <strong>Tunis & Remote</strong>
+                                <span data-i18n="contact.loc">Localisation</span>
+                                <strong data-i18n="contact.city">Tunis & Remote</strong>
                             </div>
                         </li>
                     </ul>
@@ -371,9 +383,11 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Gazzoun. Construit avec passion en HTML/CSS/JS (parce que les fondamentaux, ça compte).</p>
+        <p data-i18n="footer.text">&copy; 2026 Gazzoun. Construit avec passion en HTML/CSS/JS (parce que les
+            fondamentaux, ça compte).</p>
     </footer>
 
+    <script src="js/translations.js"></script>
     <script src="js/script.js"></script>
     <script src="js/matrixEffect.js"></script>
     <script src="js/effet3D.js"></script>
