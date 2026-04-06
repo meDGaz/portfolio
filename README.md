@@ -2,6 +2,9 @@
 
 Bienvenue sur le dépôt de mon portfolio professionnel. Ce projet est une Single Page Application (SPA) développée en HTML, CSS et JavaScript Vanilla, conçue pour présenter mes compétences de Développeur Fullstack (Laravel & Vue.js).
 
+## Demo
+https://medgaz.github.io/portfolio/
+
 ## 🚀 Technologies utilisées
 
 - **HTML5** & **CSS3** (Variables CSS, Grid, Flexbox, Animations)
